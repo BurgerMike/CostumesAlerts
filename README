@@ -1,0 +1,113 @@
+# 🎨 CostumeAlert
+
+**CostumeAlert** es un componente SwiftUI totalmente personalizable para crear alertas modernas, elegantes y adaptables a cualquier diseño. Ideal para desarrolladores que buscan salir de las alertas estándar del sistema y darle un toque único a sus aplicaciones.
+
+---
+
+## 🚀 Características
+- ✅ Personalización completa de colores, fuentes, espaciados y formas.
+- ✅ Soporte para imágenes opcionales y configurables.
+- ✅ Botones dinámicos con disposición horizontal o vertical.
+- ✅ Autoajuste de texto para títulos, descripciones y botones.
+- ✅ Compatible con SwiftUI puro, sin dependencias externas.
+- ✅ Fácil de integrar en cualquier proyecto iOS/macOS.
+
+---
+
+## ⚡ Instalación
+
+Usa **Swift Package Manager**:
+
+1. En Xcode, ve a:
+   `File > Add Packages...`
+2. Ingresa la URL de tu repositorio:
+   ```
+   https://github.com/TuUsuario/CostumeAlert.git
+   ```
+
+3. Selecciona la versión y agrega el package a tu proyecto.
+
+---
+
+## 🎨 Ejemplo de Uso Básico
+
+```swift
+AlertsCostume(
+    title: "¡Atención!",
+    image: Image(systemName: "exclamationmark.triangle")
+        .resizable()
+        .scaledToFit()
+        .frame(width: 80, height: 80)
+        .foregroundColor(.yellow),
+    description: "Esta es una alerta personalizada.",
+    backgroundColor: .white,
+    titleColor: .red,
+    descriptionColor: .gray,
+    shadowRadius: 8,
+    buttons: [
+        CustomAlertButton(
+            title: "Aceptar",
+            action: { print("Aceptar presionado") },
+            backgroundColor: .green
+        ),
+        CustomAlertButton(
+            title: "Cancelar",
+            action: { print("Cancelar presionado") },
+            backgroundColor: .red
+        )
+    ],
+    spacer: 12,
+    verticalorhorizontal: false,
+    clipshape: AnyShape(RoundedRectangle(cornerRadius: 20))
+)
+```
+
+---
+
+## ⚙️ Parámetros Personalizables
+
+| Parámetro              | Descripción                                      |
+|------------------------|--------------------------------------------------|
+| `title`                | Texto principal de la alerta                     |
+| `description`          | Texto descriptivo                                |
+| `image`                | Imagen opcional con personalización              |
+| `backgroundColor`      | Color de fondo de la alerta                      |
+| `titleColor`           | Color del título                                 |
+| `descriptionColor`     | Color de la descripción                          |
+| `shadowRadius`         | Sombra de la alerta                              |
+| `buttons`              | Array de botones personalizados                  |
+| `spacer`               | Espaciado entre elementos                        |
+| `verticalorhorizontal` | Disposición de botones: vertical o horizontal    |
+| `clipshape`            | Forma de la alerta                               |
+| `imageMaxWidth`        | Ancho máximo de la imagen                        |
+| `imageMaxHeight`       | Alto máximo de la imagen                         |
+
+---
+
+## 💡 Ejemplo Avanzado
+
+```swift
+CustomAlertButton(
+    title: "Confirmar",
+    action: { print("Confirmado") },
+    font: .headline,
+    lineLimit: 1,
+    minimumScaleFactor: 0.6,
+    backgroundColor: .blue,
+    titleColor: .white,
+    clipShape: AnyShape(Capsule()),
+    padding: 14
+)
+```
+
+---
+
+## 👨‍💻 Autor
+
+Desarrollado por **Miguel Carlos Elizondo Martinez**
+📧 Contacto: [TuEmail@example.com]
+💻 GitHub: [https://github.com/TuUsuario](https://github.com/TuUsuario)
+
+Si te gusta este proyecto, ¡no olvides dejar una ⭐ y compartirlo!
+
+
